@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base
+{
+   body 
+   {
+     @apply flex flex-col justify-start items-center pt-14 bg-zinc-50 h-screen 
+   }
+
+   /*form styles*/
+   .form
+   {
+     @apply border bg-emerald-50 text-xl px-5 py-3 flex flex-col justify-around items-start h-80 w-96 rounded-md shadow-md shadow-stone-600
+   }
+
+   .parent-field
+   {
+     @apply w-[100%]
+   }
+
+   .field
+   {
+     @apply w-[100%] flex justify-between
+   }
+
+   .input-field
+   {
+     @apply outline-none px-2 text-stone-700 font-sans text-lg font-semibold border border-gray-400 rounded-md
+   }
+
+   .drop-down
+   {
+     @apply w-[236px]
+   }
+
+   .error-msg
+   {
+     @apply text-[17px] font-sans font-medium text-red-500 invisible transition-all duration-500
+   }
+
+   .submit-btn
+   {
+     @apply text-white bg-blue-600 px-3 py-2 rounded-md font-medium hover:opacity-70 transition-all duration-300
+   }
+
+   /*expenses list styles*/
+   
+   .expenses-list-ctr
+   {
+     @apply h-auto  mt-5 
+   }
+
+   .expenses-table
+   {
+     @apply border w-[150%] ml-[-90px] mb-7
+   }
+
+   .table-header-cell
+   {
+     @apply border border-gray-700 w-1/4 h-12
+   }
+
+   .table-cell
+   {
+     @apply font-sans font-medium border border-gray-400 text-center w-1/4 h-11
+   }
+
+   .delete-btn
+   {
+     @apply border border-red-600 text-red-600 px-2 py-1 rounded-md hover:bg-red-600 hover:text-white transition-all duration-300
+   }
+
+}
