@@ -46,7 +46,8 @@ function ExpensesList({expensesList ,onExpenseDelete }:Props)
 
   function handleExpenseDelete(event:MouseEvent<HTMLButtonElement>)
   {
-      onExpenseDelete(expensesList.filter(ex=>ex.id !== event.target.dataset.id))
+      const target = event.target as HTMLElement;
+      onExpenseDelete(expensesList.filter(ex=>ex.id !== target.dataset.id))
   }
 
   return (

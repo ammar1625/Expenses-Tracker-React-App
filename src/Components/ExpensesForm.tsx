@@ -86,8 +86,9 @@ function ExpensesForm({expensesList ,  onFormSubmit}:Props)
         event.preventDefault();
         if(validateFields())
             {
-                
-                onFormSubmit([...expensesList , {id:uuidv4() , description:descriptionRef.current?.value , ammount: parseFloat(ammountRef.current?.value) , category:categoryRef.current?.value}]);
+                //store ammount input value in a variable 
+                let price = ammountRef.current?.value;
+                onFormSubmit([...expensesList , {id:uuidv4() , description:descriptionRef.current?.value , ammount: parseFloat(price !== undefined ?price:"0") , category:categoryRef.current?.value}]);
                 clearFields();
             }
 
